@@ -1,0 +1,25 @@
+<%- include('../layouts/header.ejs') -%>
+
+<div class="container mt-5 home-container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card home-card">
+                <img src="userImages/<%= user.image %>" width="100px" height="100px" alt="<%= user.name %>">
+                <div class="card-body">
+                    <h5 class="card-title"><%= user.name %></h5>
+                    <p class="card-text">Email: <%= user.email %></p>
+                    <p class="card-text">Phone: <%= user.mobile %></p>
+                    <p class="card-text">Verified: Yes</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <!-- Add your content for the main section here -->
+            <h3>Welcome</h3>
+            <a href="/edit?id=<%= user._id %>" class="btn btn-primary">Edit</a>
+            <a href="/logout" class="btn btn-danger">Logout</a>
+        </div>
+    </div>
+</div>
+
+<%- include('../layouts/footer.ejs') -%>
